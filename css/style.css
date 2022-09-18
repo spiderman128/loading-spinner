@@ -1,0 +1,55 @@
+@keyframes bar {
+  0% {
+    height: 70px; }
+  50%, 100% {
+    height: 120px; } }
+
+@keyframes fade {
+  0% {
+    opacity: 100%; }
+  100% {
+    opacity: 0%; } }
+
+.loading-spinner {
+  margin-top: 60px;
+  width: 100%;
+  display: block;
+  justify-content: center; }
+  .loading-spinner .spinner-container {
+    display: block; }
+  .loading-spinner .loading-animation {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .loading-spinner .loading-animation div, .loading-spinner .loading-animation::before, .loading-spinner .loading-animation::after {
+      animation-iteration-count: infinite;
+      animation-direction: alternate;
+      animation-timing-function: linear;
+      width: 32px;
+      margin: 0px 10px;
+      background-color: #eb4242;
+      height: 70px;
+      animation-duration: 0.75s;
+      animation-name: bar; }
+    .loading-spinner .loading-animation::before, .loading-spinner .loading-animation::after {
+      content: "";
+      display: block; }
+    .loading-spinner .loading-animation::before {
+      animation-delay: 0; }
+    .loading-spinner .loading-animation div {
+      animation-delay: -0.12s; }
+    .loading-spinner .loading-animation::after {
+      animation-delay: -0.24s; }
+  @media (max-width: 768px) {
+    @keyframes bar {
+      0% {
+        height: 35px; }
+      50%, 100% {
+        height: 60px; } }
+    .loading-spinner .loading-animation {
+      height: 100px; }
+      .loading-spinner .loading-animation div, .loading-spinner .loading-animation::before, .loading-spinner .loading-animation::after {
+        animation-duration: 0.6s;
+        margin: 0px 6px;
+        width: 16px; } }

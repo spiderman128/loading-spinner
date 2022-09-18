@@ -1,0 +1,25 @@
+{
+  "name": "sass-setup",
+  "version": "1.0.0",
+  "description": "Link to the original post is <span style=\"color: coral\"> LINK HERE </span>.",
+  "main": "index.js",
+  "scripts": {
+    "css": "node-sass --include-path scss style.scss css/style.css",
+    "watch": "nodemon -e scss -x npm run css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheKinng96/sass-setup.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TheKinng96/sass-setup/issues"
+  },
+  "homepage": "https://github.com/TheKinng96/sass-setup#readme",
+  "devDependencies": {
+    "node-sass": "^7.0.1",
+    "nodemon": "^2.0.19"
+  }
+}
